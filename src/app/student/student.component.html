@@ -1,0 +1,15 @@
+<div>
+  <h1>{{titlePage}}</h1>
+  <h3>Student List</h3>
+  <ul *ngFor = "let student of students">
+    <li >
+      {{student.name + ' hobbies: ' + student.hobbies}} 
+    </li>
+  </ul>
+  <h3>Students who are 4 years of age</h3>
+  <ul *ngFor = "let student of students">
+    <li *ngIf = "[student.age] == 4">
+      <p [innerHTML] = "student.favouriteFood"></p>
+    </li>
+  </ul>
+</div>
